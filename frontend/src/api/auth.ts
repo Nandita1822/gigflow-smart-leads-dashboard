@@ -20,15 +20,15 @@ export interface LoginInput {
 
 export const authApi = {
   register: async (input: RegisterInput): Promise<AuthPayload> => {
-    const { data } = await api.post<ApiResponse<AuthPayload>>("/auth/register", input);
+    const { data } = await api.post<ApiResponse<AuthPayload>>("/api/auth/register", input);
     return data.data;
   },
   login: async (input: LoginInput): Promise<AuthPayload> => {
-    const { data } = await api.post<ApiResponse<AuthPayload>>("/auth/login", input);
+    const { data } = await api.post<ApiResponse<AuthPayload>>("/api/auth/login", input);
     return data.data;
   },
   me: async (): Promise<User> => {
-    const { data } = await api.get<ApiResponse<{ user: User }>>("/auth/me");
+    const { data } = await api.get<ApiResponse<{ user: User }>>("/api/auth/me");
     return data.data.user;
   }
 };
