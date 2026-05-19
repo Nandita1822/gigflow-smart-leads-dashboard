@@ -1,6 +1,6 @@
 import axios, { AxiosError, InternalAxiosRequestConfig } from "axios";
 
-export const API_BASE_URL = "https://gigflow-backend-orvc.onrender.com/api";
+export const API_BASE_URL = "https://gigflow-backend-orvc.onrender.com";
 
 export const api = axios.create({
   baseURL: API_BASE_URL,
